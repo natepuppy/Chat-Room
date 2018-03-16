@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arvo';
+    font-size: 16px;
+    padding: 20px 100px 0px 100px;
+    background: #f3f3f3;
+}
+
+/* List */
+
+ul {
+    list-style: none;
+}
+
+li {
+    background: #fff;
+    width: 450px;
+    min-height: 30px;
+    padding: 10px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+    margin-right: 0px;
+    font-size: 1em;
+    display: flex;
+    align-items: right;
+}
+
+.delete {
+    display: none;
+    margin-left: auto;
+}
+
+li:hover .delete {
+    display: block;
+}
+
+label {
+    width: 400px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
+
+/* Form */
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    margin-right: 10px;
+}
+
+input[type=text] {
+    font-size: 1em;
+}
+
+button {
+    font-family: 'Arvo';
+    font-size: 1em;
+}
+
+/* Controls */
+
+.controls {
+    margin-top: 20px;
+}
+
+button.like {
+    font-size:24px
+    padding-right: 0px;
+    margin-right: 10px;
+}
+label.like {
+    margin-right: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    width: 0px;
+}
+
+.scrollComments {
+    height:100%;
+    width:550px;
+    border:1px solid #ccc;
+    font:16px/26px Georgia, Garamond, Serif;
+    overflow:auto;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
