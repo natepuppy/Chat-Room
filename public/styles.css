@@ -38,6 +38,8 @@ li:hover .delete {
 
 label {
     width: 400px;
+    font-family: sans-serif;
+    font-size: 17px;
 }
 
 .completed {
@@ -103,13 +105,30 @@ label.like {
 }
 
 h2 {
-    font-size: 10px;
+    font-size: 15px;
+    font-family: sans-serif;
 }
 
+h1 {
+    font-family: sans-serif;
+}
 
+h4 {
+    font-size: 15px;
+    font-family: sans-serif;
+    margin-bottom: 20px;
+}
 
+h3 {
+    font-size: 15px;
+    font-family: Courier New;
+    margin-bottom: 20px;
+    font-style: oblique;
+}
 
-
+hr {
+    border-color: red;
+}
 
 
 

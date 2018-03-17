@@ -88,7 +88,6 @@ var app = new Vue({
           }
         }
       }
-      //console.log(this.soulMate);
     },
 
     findBFF: function(name) {
@@ -109,7 +108,6 @@ var app = new Vue({
           }
         }
       }
-      //console.log(this.soulMate);
     },
 
     amIGoodLooking: function(rate) {
