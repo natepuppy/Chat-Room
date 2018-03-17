@@ -50,6 +50,7 @@
                 <label v-bind:class="{ completed: item.completed }">-{{ item.name }} <br> {{ item.text }}</label>
                 <button class="like" v-on:click="Increment(item)"><i class="fa fa-thumbs-up"></i></button>
                 <label class="like">{{item.likes}}</label>
+                <button v-on:click="deleteItem(item)" class="delete">X</button>
               </li>
             </ul>
           </div>
@@ -60,4 +61,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js" integrity="sha256-pU9euBaEcVl8Gtg+FRYCtin2vKLN8sx5/4npZDmY2VA=" crossorigin="anonymous"></script>
     <script src="/script.js"></script>
   </body>
+  <footer>
+      <a href="https://github.com/jaredworkman/creative4" class="footer">My Git Hub Repository</a>
+  </footer>
 </html>

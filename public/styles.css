@@ -28,18 +28,15 @@ li {
 }
 
 .delete {
-    display: none;
-    margin-left: auto;
-}
-
-li:hover .delete {
-    display: block;
+    margin-right: 10px;
+    margin-left: 10px;
+    font-family: sans-serif;
 }
 
 label {
     width: 400px;
     font-family: sans-serif;
-    font-size: 17px;
+    font-size: 15px;
 }
 
 .completed {
@@ -130,6 +127,16 @@ hr {
     border-color: red;
 }
 
+footer {
+    background-color: #fceaeb;
+    padding: 10px;
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    width: 100%;
+    text-align: center;
+    position: fixed; bottom: 0
+}
 
 
 
