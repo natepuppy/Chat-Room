@@ -8,8 +8,10 @@ var app = new Vue({
     show: 'all',
     drag: {},
     sortedButtonPressed: false,
-    // soulMate: '',
-    // numItems: 0,
+    soulMate: "",
+    BFF: "",
+    rating: "",
+    married: "",
   },
   created: function() {
       this.getItems(); // should this be in created?
@@ -48,8 +50,6 @@ var app = new Vue({
       }).then(response => {
 	     this.text = "";
        this.name = "";
-       // numItems: numItems++;
-       // console.log(numItems);
 	     this.getItems();
 	     return true;
 
@@ -70,16 +70,69 @@ var app = new Vue({
     },
 
     
-    // findOut: function(name) {
-    //   for (var i = 0; i < items.length; i++) {
-    //     for (var j = 0; j < items[i].name.length; j++) {
-    //       if ((items[i].name.charAt(j) == name.charAt(1)) && (items[i].name != name)) {
-    //         soulMate: items[i].name;
-    //       }
-    //     }
-    //   }
-    //   soulMate: "You will be forever lonely";
-    // },
+    findOut: function(name) {
+      loop1:
+      for (var i = 0; i < this.items.length; i++) {
+        loop2:
+        for (var j = 0; j < this.items[i].name.length; j++) {
+          if (name.length != 0) {
+            if ((this.items[i].name.charAt(j) == name.charAt(0))) {
+                if ((this.items[i].name != name)) {
+                this.soulMate =  this.items[i].name;
+                break loop1;
+              }
+            }
+            else {
+              this.soulMate = "You will be forever lonely";
+            }
+          }
+        }
+      }
+      //console.log(this.soulMate);
+    },
+
+    findBFF: function(name) {
+      loop1:
+      for (var i = 0; i < this.items.length; i++) {
+        loop2:
+        for (var j = 0; j < this.items[i].name.length; j++) {
+          if (name.length != 0) {
+            if ((this.items[i].name.charAt(j) == name.charAt(1))) {
+                if ((this.items[i].name != name)) {
+                this.BFF =  this.items[i].name;
+                break loop1;
+              }
+            }
+            else {
+              this.BFF = "HA!! Nobody likes you.";
+            }
+          }
+        }
+      }
+      //console.log(this.soulMate);
+    },
+
+    amIGoodLooking: function(rate) {
+      rate = parseInt(rate);
+      if (rate > 10) {
+        this.married = "Because you lied, will never find her."; 
+      }
+      else if (rate > 8) {
+        this.married = "You'll definitely find her."; 
+      }
+      else if (rate > 6) {
+        this.married = "You'll have to work really hard, but eventually she'll show up."; 
+      }
+      else if (rate > 4) {
+        this.married = "You''ll find someone, but remember, they aren't all first round picks."; 
+      }
+      else if (rate > 2) {
+        this.married = "Chances are slim."; 
+      }
+      else {
+        this.married = "Better luck next year."; 
+      }
+    },
 
     deleteItem: function(item) {
       axios.delete("/api/items/" + item.id).then(response => {
